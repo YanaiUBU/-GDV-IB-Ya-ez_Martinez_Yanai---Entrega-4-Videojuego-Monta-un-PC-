@@ -1,0 +1,738 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PiezasColocadas",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 983689896848305
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "FuenteDePoder",
+					"sid": 105691956838102,
+					"parameters": {
+						"object": "ContenedorFuenteDePoder"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "FuenteDePoder",
+					"sid": 457555696647267,
+					"parameters": {
+						"object": "ContenedorFuenteDePoder",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 606390410939471,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 518885415014133
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 725015012370847,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 138112589264557,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "FuenteDePoder",
+							"sid": 664615207243520,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 245478866040382
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "PlacaBase",
+					"sid": 376380475382836,
+					"parameters": {
+						"object": "ContenedorPlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "PlacaBase",
+					"sid": 485813991962251,
+					"parameters": {
+						"object": "ContenedorPlacaBase",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 830265950624481,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 756393675693520
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 992526410093754,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 310425024642886,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "PlacaBase",
+							"sid": 860105285220561,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 622138190177684
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Disipador",
+					"sid": 232661023740639,
+					"parameters": {
+						"object": "ContenedorDisipador"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Disipador",
+					"sid": 334435422754282,
+					"parameters": {
+						"object": "Procesador"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Disipador",
+					"sid": 954124073233265,
+					"parameters": {
+						"object": "PlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Disipador",
+					"sid": 234028454573288,
+					"parameters": {
+						"object": "ContenedorDisipador",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 349963537664010,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 662811834017640
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 740733984360989,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 138963309157434,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Disipador",
+							"sid": 928365573533342,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 260329167630437
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "TarjetaGrafica",
+					"sid": 988210533197290,
+					"parameters": {
+						"object": "PlacaBase"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "TarjetaGrafica",
+					"sid": 213771483772834,
+					"parameters": {
+						"object": "ContenedorTarjetaGrafica"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "TarjetaGrafica",
+					"sid": 477872979334638,
+					"parameters": {
+						"object": "ContenedorTarjetaGrafica",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 546980953057545,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 282879870401216
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 197017752385174,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 221922011739407,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "TarjetaGrafica",
+							"sid": 712894924712751,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 407671143389303
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "MemoriaRam",
+					"sid": 165685356784517,
+					"parameters": {
+						"object": "contenedorRAM"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "MemoriaRam",
+					"sid": 884549870627880,
+					"parameters": {
+						"object": "PlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "MemoriaRam",
+					"sid": 307621670544755,
+					"parameters": {
+						"object": "contenedorRAM",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 503272613329977,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 844500325691282
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 250259414447802,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 568781315910921,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "MemoriaRam",
+							"sid": 858217202441137,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 268956537185546
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Procesador",
+					"sid": 258442504415012,
+					"parameters": {
+						"object": "ContenedorCPU"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Procesador",
+					"sid": 716140429177614,
+					"parameters": {
+						"object": "PlacaBase"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Procesador",
+					"sid": 645387522225562,
+					"parameters": {
+						"object": "ContenedorCPU",
+						"image-point-optional": "0"
+					}
+				}
+			],
+			"sid": 410983138169330,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 595714761356649
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 704568486869539,
+							"parameters": {
+								"variable": "PiezasColocadas",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "NumeroDePiezas",
+							"sid": 840863506236726,
+							"parameters": {
+								"text": "\"Has colocado: \" & PiezasColocadas & \"/6\""
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Procesador",
+							"sid": 458506547816866,
+							"behaviorType": "ArrastrarYSoltar",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 621911408547347
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "DisipadorTexto",
+					"sid": 220351255961765,
+					"parameters": {
+						"text": "\"Disipador\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Disipador",
+					"sid": 683210229595515,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "DisipadorTexto",
+					"sid": 319302274133576,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DisipadorTexto",
+					"sid": 853251327890363,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 663581352560467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "FuenteDePoderTexto",
+					"sid": 186560517268263,
+					"parameters": {
+						"text": "\"Fuente de poder\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "FuenteDePoder",
+					"sid": 697655538660083,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "FuenteDePoderTexto",
+					"sid": 577700638727292,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "FuenteDePoderTexto",
+					"sid": 814099748219968,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 960793981514663
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "MemoriaRamTexto",
+					"sid": 850934362311248,
+					"parameters": {
+						"text": "\"Memoria RAM\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "MemoriaRam",
+					"sid": 740046691178744,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "MemoriaRamTexto",
+					"sid": 803420868764842,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "MemoriaRamTexto",
+					"sid": 306799396591487,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 106697595489014
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "PlacaBaseTexto",
+					"sid": 397745081415919,
+					"parameters": {
+						"text": "\"Placa base\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "PlacaBase",
+					"sid": 373016313273883,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "PlacaBaseTexto",
+					"sid": 898801991837713,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "PlacaBaseTexto",
+					"sid": 996909588637687,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 329613660800022
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "ProcesadorTexto",
+					"sid": 204565176040086,
+					"parameters": {
+						"text": "\"Procesador\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Procesador",
+					"sid": 599462981013370,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "ProcesadorTexto",
+					"sid": 865699772159502,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ProcesadorTexto",
+					"sid": 849364163756451,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 594244225689951
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-text",
+					"objectClass": "TarjetaGraficaTexto",
+					"sid": 940716787483966,
+					"parameters": {
+						"text": "\"Tarjeta Grafica\"",
+						"case": "case-insensitive"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "TarjetaGrafica",
+					"sid": 512969423192459,
+					"behaviorType": "ArrastrarYSoltar",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-read-only",
+					"objectClass": "TarjetaGraficaTexto",
+					"sid": 250687922142330,
+					"parameters": {
+						"mode": "read-only"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TarjetaGraficaTexto",
+					"sid": 193592920201352,
+					"parameters": {
+						"text": "\"Correcto\""
+					}
+				}
+			],
+			"sid": 348757647080117
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 431476873181038,
+					"parameters": {
+						"variable": "PiezasColocadas",
+						"comparison": 0,
+						"value": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "VictoriaTexto",
+					"sid": 387333703753582,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "VictoriaTexto",
+					"sid": 482937962006673,
+					"parameters": {
+						"text": "\"GANASTE!!!!!\""
+					}
+				}
+			],
+			"sid": 213974813501027
+		}
+	],
+	"sid": 866400988738060
+}
